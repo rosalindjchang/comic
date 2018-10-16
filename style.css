@@ -1,0 +1,182 @@
+body {
+    margin:0;
+}
+
+.dark {
+    background:black;
+    transition: 1s;
+}
+
+.light {
+    background:white;
+    transition: 1s;
+}
+
+#roomr {
+    cursor: pointer;
+}
+
+.room {
+    height:101vh;
+    width:76vh;
+    position:absolute;
+    left:0;
+    top:-1px;
+    transition:1s;
+}
+
+.r1 {
+    height:50vh; 
+    width:38vh;
+    position: absolute;
+    left:20%;
+    top:15%;
+    transition:1s;
+}
+
+.r2 {
+    height:101vh;
+    width:76vh;
+    position:absolute;
+    left:0;
+    top:-1px;
+    transition:1s;
+}
+
+.r3 {
+    width:70vh;
+    position:absolute;
+    left:-10vw;
+    top:-1px;
+    transition:1.5s;
+    opacity: 0;
+}
+
+
+
+.shade {
+    border-bottom: 35.5vh solid #C1EADB;
+    border-left: 30vw solid transparent;
+    border-right: -0 solid transparent;
+    position:fixed;
+    width:38vh;
+    height:50vh;
+    bottom:0;
+    left: -10vw;
+    transition:1s;
+}
+
+.noshade {
+    border-bottom: 0vh solid #C1EADB;
+    transition:1s;
+}
+
+#windowo {
+    width:19.5vh;
+    height:30vh;
+    position:fixed;
+    left:44vh;
+    top:23vh;
+}
+
+#window1 {
+    position:relative;
+    border: 1px solid #C1EADB;
+    position:fixed;
+    visibility: hidden;
+}
+
+.openw {
+   height:30vh;
+    width:19.5vh;
+   top:23vh;
+   opacity: 0.5;
+    left:130vh;
+   transition:2s;
+}
+
+.openw1 {
+    height:33vh;
+    width:19.5vh;
+    top: 20vh;
+    opacity: 1;
+    left:130vh;
+    transition: 2s;
+}
+
+#window2 {
+    position:relative;
+    border: 1px solid #C1EADB;
+    transform:skewY(-40deg);
+    width:12vh;
+    position:fixed;
+    left:84vh;
+    visibility: hidden;
+}
+
+.closew {
+    top:54vh;
+    height:4vh;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.closew1 {
+    top:58vh;
+    height:0vh;
+    opacity:1;
+    transition: 1s;
+}
+
+#windowo:hover {
+    cursor:pointer;
+}
+
+.ww {
+    top:5vh;
+    left:5vw;
+    height:82vh;
+    width: 81vw;
+    transition: 1s;
+    opacity: 1;
+}
+
+#land {
+    position: absolute;
+    background: #C1E8C5;
+    background-image: url("svg/landscape-05.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid;
+}
+
+.nola {
+    opacity: 0;
+    transition:1s
+}
+
+.la {
+    top:5vh;
+    left:5vw;
+    height:82vh;
+    width: 81vw;
+    transition: 1s;
+    opacity: 1;
+}
+
+
+#windowS {
+    position:fixed;
+    left:5vh;
+    top:52vh;
+    width:18vh;
+    height:8vh;
+}
+
+#windowS:hover {
+    cursor:pointer;
+}
+
+#landscape {
+    position: absolute;
+}
