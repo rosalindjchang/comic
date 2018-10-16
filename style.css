@@ -180,3 +180,55 @@ body {
 #landscape {
     position: absolute;
 }
+
+#house {
+    position: absolute;
+    border: 0.5px solid;
+    background:white;
+    cursor: pointer;
+}
+
+.h1 {
+    top:75vh;
+    right:10vw;
+    width:100px;
+    height: 30px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.h2 {
+    top:75vh;
+    right:10vw;
+    width:120px;
+    height: 70px;
+    opacity: 1;
+    transition: 1s;
+}
+
+#hdoor {
+    width: 10px;
+    height:20px;
+    bottom:0;
+    left:22px;
+}
+
+#hw1 {
+    width: 8px;
+    height: 16px;
+    left: 70px;
+    bottom:24px;
+}
+
+#hw2 {
+    width: 8px;
+    height: 3px;
+    left: 88px;
+    bottom:24px;
+}
+
+.h {
+   position: absolute;
+    border: 0.5px solid;
+    background:white; 
+}

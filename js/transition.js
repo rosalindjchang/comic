@@ -7,15 +7,20 @@ $(document).ready(function(){
     var windowSS = document.getElementById("windowS");
     var roomframe = document.getElementById("roomr");
     var landframe = document.getElementById("land");
-    land.style.visibility = "hidden";
+    var houseframe = document.getElementById("house");
+    
+    houseframe.style.visibility = "hidden";
+    landframe.style.visibility = "hidden";
     windowoo.style.visibility = "hidden";
     windowSS.style.visibility = "hidden";
     
     var window1 = document.getElementById("window1");
     var window2 = document.getElementById("window2");
     
+    
+    // ENTER ROOM
+    
     $("#roomr").click(function(){
-        
        $(".room").removeClass("r1");
         $("#roomr").addClass("r2").removeClass("r1");
         $("body").addClass("light").removeClass("dark");
@@ -25,15 +30,18 @@ $(document).ready(function(){
         roomframe.style.visibility = "hidden";
     });
     
+    
      if (roomIn == false){
             roomIn = true;
             
-            //click windows
+            // GO OUTSIDE
             $("#windowo").click(function(){
-                 windowclicked = true;
-                land.style.visibility = "visible";
+                windowclicked = true;
+                landframe.style.visibility = "visible";
+                houseframe.style.visibility = "visible";
                 $("#window1").addClass("ww").removeClass("openw1");
                 $(".room").addClass("r3");
+                $("#house").addClass("h2");
                 $("#land").addClass("openw1");
                 setTimeout(function(){
                     $("#land").addClass("la");
@@ -42,6 +50,10 @@ $(document).ready(function(){
                 windowSS.style.visibility = "hidden";
             });
          
+            
+    
+         
+            // RETURN to SCN1
             $("#windowS").click(function(){
                 windowclicked = true;
                 $(".room").addClass("r1");
@@ -53,7 +65,7 @@ $(document).ready(function(){
                 roomframe.style.visibility = "visible";
             });
          
-            // if hover over windows
+            // WINDOW HOVER
                 $("#windowo").mouseover(function(){
                     window1.style.visibility = "visible";
                     $("#window1").fadeIn().addClass("openw1");
@@ -77,9 +89,11 @@ $(document).ready(function(){
             roomIn = false;
         }
     
+    // BACK INSIDE SCN2
+    $("#house").click(function() {
+        console.log("househouse");
+    });
        
-    
-    
     
  });
 
