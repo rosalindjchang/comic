@@ -1,7 +1,6 @@
 $(document).ready(function(){
     
     var roomIn = false;
-    var windowclicked = false;
     
     var windowoo = document.getElementById("windowo");
     var windowSS = document.getElementById("windowS");
@@ -29,14 +28,12 @@ $(document).ready(function(){
         windowSS.style.visibility = "visible";
         roomframe.style.visibility = "hidden";
     });
-    
-    
+      
      if (roomIn == false){
             roomIn = true;
             
             // GO OUTSIDE
             $("#windowo").click(function(){
-                windowclicked = true;
                 landframe.style.visibility = "visible";
                 houseframe.style.visibility = "visible";
                 $("#window1").addClass("ww").removeClass("openw1");
@@ -50,12 +47,8 @@ $(document).ready(function(){
                 windowSS.style.visibility = "hidden";
             });
          
-            
-    
-         
             // RETURN to SCN1
             $("#windowS").click(function(){
-                windowclicked = true;
                 $(".room").addClass("r1");
                 $("#roomr").addClass("r1").removeClass("r2");
                 $("body").addClass("dark").removeClass("light");
@@ -83,7 +76,6 @@ $(document).ready(function(){
                 $("#windowS").mouseout(function() {
                     $("#window2").fadeOut().removeClass("closew1");
                 });
-             
          
         } else if (roomIn == true) {
             roomIn = false;
@@ -91,9 +83,15 @@ $(document).ready(function(){
     
     // BACK INSIDE SCN2
     $("#house").click(function() {
-        console.log("househouse");
+        $("#window1").removeClass("ww").addClass("openw1");
+        $(".room").removeClass("r3");
+        $("#house").removeClass("h2");
+        $("#land").removeClass("openw1 la"); 
+        houseframe.style.visibility = "hidden";
+        landframe.style.visibility = "hidden";
+        windowoo.style.visibility = "visible";
+        windowSS.style.visibility = "visible";
     });
        
-    
  });
 
