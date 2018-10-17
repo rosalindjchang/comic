@@ -35,11 +35,10 @@ body {
 }
 
 .r2 {
-    height:101vh;
-    width:76vh;
+    height:100vh;
     position:absolute;
     left:0;
-    top:-1px;
+    top:0;
     transition:1s;
 }
 
@@ -143,11 +142,21 @@ body {
 
 #land {
     position: absolute;
-    background: #C1E8C5;
-    background-image: url("svg/landscape-05.svg");
     background-repeat: no-repeat;
     background-size: cover;
     border: 0.5px solid;
+}
+
+.lp {
+    background-image: url("svg/landscape-05.svg");
+}
+
+.lp1 {
+    background-image: url("svg/portal1-05.svg"), url("svg/landscape-05.svg");
+}
+
+.lp2 {
+    background-image: url("svg/portal2-05.svg"), url("svg/landscape-05.svg");
 }
 
 .nola {
@@ -231,4 +240,48 @@ body {
    position: absolute;
     border: 0.5px solid;
     background:white; 
+}
+
+
+ 
+@media only screen and (min-aspect-ratio: 8/7) {
+    #portal1 {
+        width: 50px;
+        height: 50px;
+        right: 11vw;
+        top: 28vh;
+    }
+
+    #portal1:hover {
+    cursor: pointer;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 5/8) {
+    #portal2 {
+        width:25px;
+        height:40px;
+        top: 56vh;
+        right:12vw;
+    }
+
+    #portal2:hover {
+        cursor: pointer;
+    }
+}
+
+.cave {
+    position: absolute;
+    height:60vh;
+    
+}
+
+#cout {
+    top:20vh;
+    left:20vh;
+}
+
+#cin {
+    top:20vh;
+    left:63vh; 
 }
