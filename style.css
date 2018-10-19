@@ -173,6 +173,14 @@ body {
     opacity: 1;
 }
 
+.la2 {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    top:0;
+    left:14vw;
+    transition: 0.9s;
+}
 
 #windowS {
     position:fixed;

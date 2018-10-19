@@ -132,7 +132,14 @@ $(document).ready(function(){
     // SEE BUILDING
     
     $("#portal1").click(function() {
-        console.log("1");
+      
+        $("#house").removeClass("h2");
+        $("#land").addClass("la2"); 
+        setTimeout(function() {
+            landframe.style.visibility = "hidden";
+        },1000);
+        houseframe.style.visibility = "hidden";
+        p2.style.visibility = "hidden";
     });
     
     
@@ -143,9 +150,8 @@ $(document).ready(function(){
         c1.style.visibility = "visible";
         c2.style.visibility = "visible";
         $("#house").removeClass("h2");
-        $("#land").removeClass("la"); 
+        $("#land").addClass("la2"); 
         setTimeout(function() {
-            $("#land").removeClass("openw1"); 
             landframe.style.visibility = "hidden";
         },1000);
         houseframe.style.visibility = "hidden";
