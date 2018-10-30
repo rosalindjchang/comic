@@ -149,6 +149,7 @@ body {
 
 .lp {
     background-image: url("svg/landscape-05.svg");
+    visibility: hidden;
 }
 
 .lp1 {
@@ -205,6 +206,10 @@ body {
     cursor: pointer;
 }
 
+.hide {
+    visibility: hidden;
+}
+
 .h1 {
     top:75vh;
     right:10vw;
@@ -212,6 +217,7 @@ body {
     height: 30px;
     opacity: 0;
     transition: 1s;
+    visibility: hidden;
 }
 
 .h2 {
@@ -281,7 +287,7 @@ body {
 .cave {
     position: absolute;
     height:60vh;
-    
+    visibility: hidden;
 }
 
 #cout {
@@ -292,4 +298,24 @@ body {
 #cin {
     top:20vh;
     left:63vh; 
+}
+
+.building {
+    position: absolute;
+    height:45vh;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+#bout {
+    top:20vh;
+    left:20vh;
+}
+
+#bin {
+    top:20vh;
+    left:75vh; 
 }

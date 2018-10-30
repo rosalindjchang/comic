@@ -7,15 +7,7 @@ $(document).ready(function(){
     var roomframe = document.getElementById("roomr");
     var landframe = document.getElementById("land");
     var houseframe = document.getElementById("house");
-    var p1 = document.getElementById("portal1");
-    var p2 = document.getElementById("portal2");
-    var c1 = document.getElementById("cout");
-    var c2 = document.getElementById("cin");
     
-    c1.style.visibility = "hidden";
-    c2.style.visibility = "hidden";
-    p1.style.visibility = "hidden";
-    p2.style.visibility = "hidden";
     houseframe.style.visibility = "hidden";
     landframe.style.visibility = "hidden";
     windowoo.style.visibility = "hidden";
@@ -51,8 +43,8 @@ $(document).ready(function(){
                 setTimeout(function(){
                     $("#land").addClass("la");
                 }, 1);
-                p1.style.visibility = "visible";
-                p2.style.visibility = "visible";
+               $("#portal1").addClass("show");
+                $("#portal2").addClass("show");
                 windowoo.style.visibility = "hidden";
                 windowSS.style.visibility = "hidden";
             });
@@ -106,8 +98,8 @@ $(document).ready(function(){
         houseframe.style.visibility = "hidden";
         windowoo.style.visibility = "visible";
         windowSS.style.visibility = "visible";
-        p1.style.visibility = "hidden";
-        p2.style.visibility = "hidden";
+        $("#portal1").removeClass("show");
+        $("#portal2").removeClass("show");
     });
        
     
@@ -132,31 +124,32 @@ $(document).ready(function(){
     // SEE BUILDING
     
     $("#portal1").click(function() {
-      
-        $("#house").removeClass("h2");
-        $("#land").addClass("la2"); 
+        
+        $("#house").toggleClass("h2");
+        $("#land").toggleClass("la2"); 
+        $(".building").toggleClass("show");
         setTimeout(function() {
-            landframe.style.visibility = "hidden";
+            $("#land").toggleClass("show");
         },1000);
-        houseframe.style.visibility = "hidden";
-        p2.style.visibility = "hidden";
+         $(".h1").toggleClass("show");
+        $("#portal2").toggleClass("show");
+        
     });
     
     
     // SEE CAVE
     
      $("#portal2").click(function() {
-        console.log("2");
-        c1.style.visibility = "visible";
-        c2.style.visibility = "visible";
-        $("#house").removeClass("h2");
-        $("#land").addClass("la2"); 
+        $("#house").toggleClass("h2");
+        $("#land").toggleClass("la2"); 
+        $(".cave").toggleClass("show");
         setTimeout(function() {
-            landframe.style.visibility = "hidden";
+            $("#land").toggleClass("show");
         },1000);
-        houseframe.style.visibility = "hidden";
-        p1.style.visibility = "hidden";
+         $(".h1").toggleClass("show");
+        $("#portal1").toggleClass("show");
     });
+ 
     
     
  });
