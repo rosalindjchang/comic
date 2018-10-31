@@ -300,6 +300,7 @@ body {
     left:63vh; 
 }
 
+
 .building {
     position: absolute;
     height:45vh;
@@ -319,3 +320,28 @@ body {
     top:20vh;
     left:75vh; 
 }
+
+#bin:hover {
+    cursor: pointer;
+}
+
+#bo {
+   width:45vh;
+   height: 45vh;
+    position: absolute;
+    top:20vh;
+    left:20vh;
+}
+
+#bi {
+    width:45vh;
+   height: 45vh;
+    position: absolute;
+    top:20vh;
+    left:75vh; 
+}
+
+#bi:hover {
+    cursor: pointer;
+}
+

@@ -83,7 +83,6 @@ $(document).ready(function(){
             roomIn = false;
         }
     
-
     
     // BACK INSIDE SCN2
     $("#house").click(function() {
@@ -101,7 +100,7 @@ $(document).ready(function(){
         $("#portal1").removeClass("show");
         $("#portal2").removeClass("show");
     });
-       
+    
     
     // outside
     
@@ -124,18 +123,23 @@ $(document).ready(function(){
     // SEE BUILDING
     
     $("#portal1").click(function() {
-        
         $("#house").toggleClass("h2");
         $("#land").toggleClass("la2"); 
         $(".building").toggleClass("show");
         setTimeout(function() {
             $("#land").toggleClass("show");
         },1000);
-         $(".h1").toggleClass("show");
+        $(".h1").toggleClass("show");
         $("#portal2").toggleClass("show");
-        
+        $("#bi").toggleClass("show");
+        $("#bo").toggleClass("show");
     });
     
+    
+    // INTO BUILDING
+    $("#bi").click(function() {
+        console.log("innn");
+    });
     
     // SEE CAVE
     
@@ -149,6 +153,8 @@ $(document).ready(function(){
          $(".h1").toggleClass("show");
         $("#portal1").toggleClass("show");
     });
+    
+    
  
     
     
