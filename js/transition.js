@@ -127,9 +127,9 @@ $(document).ready(function(){
         $("#land").toggleClass("la2"); 
         $(".building").toggleClass("show min");
         setTimeout(function() {
-            $("#land").toggleClass("show");
+            $("#land").toggleClass("show2");
         },1000);
-        $(".h1").toggleClass("show");
+        $(".h1").toggleClass("show2");
         $("#portal2").toggleClass("show");
         $("#bi").toggleClass("show");
         $("#bo").toggleClass("show");
@@ -138,18 +138,45 @@ $(document).ready(function(){
     
     // INTO BUILDING
     $("#bi").click(function() {
-        console.log("innn");
         $("#bi").removeClass("show");
         $("#bo").removeClass("show");
         $(".building").removeClass("show").addClass("min");
         $("#portal1").removeClass("show");
-        $("#broom").addClass("buildroom").removeClass("min");
+        $("#broom").addClass("buildroom").removeClass("broomin");
         $("#bbox").addClass("box1").removeClass("boxmin");
         $("#bikeclick").addClass("bikebox").removeClass("hide");
+        $("#wallclick").addClass("wallbox").removeClass("hide");
+        $("#rugclick").addClass("rugbox").removeClass("hide");
     });
     
-     $("#bikeclick").mouseover(function(){
-        
+     $("#wallclick").mouseover(function(){
+        $("#twod").addClass("show").removeClass("hide");
+     });
+    
+    $("#wallclick").mouseout(function(){
+        $("#twod").removeClass("show").addClass("hide");
+     });
+    
+     $("#rugclick").mouseover(function(){
+        $("#rug").addClass("show").removeClass("hide");
+     });
+    
+    $("#rugclick").mouseout(function(){
+        $("#rug").removeClass("show").addClass("hide");
+     });
+    
+    // RETURN OUT
+    
+    $("#bikeclick").click(function(){
+        $("#bi").addClass("show");
+        $("#bo").addClass("show");
+        $(".building").addClass("show").removeClass("min");
+        $("#portal1").addClass("show");
+        $("#broom").addClass("broomin").removeClass("buildroom");
+        $("#bbox").removeClass("box1").addClass("boxmin");
+        $("#bikeclick").removeClass("bikebox").addClass("hide");
+        $("#wallclick").removeClass("wallbox").addClass("hide");
+        $("#rugclick").removeClass("rugbox").addClass("hide");
      });
     
     // SEE CAVE
@@ -159,14 +186,13 @@ $(document).ready(function(){
         $("#land").toggleClass("la2"); 
         $(".cave").toggleClass("show min");
         setTimeout(function() {
-            $("#land").toggleClass("show");
+            $("#land").toggleClass("show2");
         },1000);
-         $(".h1").toggleClass("show");
+         $(".h1").toggleClass("show2");
         $("#portal1").toggleClass("show");
     });
     
     
- 
     
     
  });
