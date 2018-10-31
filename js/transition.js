@@ -125,7 +125,7 @@ $(document).ready(function(){
     $("#portal1").click(function() {
         $("#house").toggleClass("h2");
         $("#land").toggleClass("la2"); 
-        $(".building").toggleClass("show");
+        $(".building").toggleClass("show min");
         setTimeout(function() {
             $("#land").toggleClass("show");
         },1000);
@@ -139,14 +139,25 @@ $(document).ready(function(){
     // INTO BUILDING
     $("#bi").click(function() {
         console.log("innn");
+        $("#bi").removeClass("show");
+        $("#bo").removeClass("show");
+        $(".building").removeClass("show").addClass("min");
+        $("#portal1").removeClass("show");
+        $("#broom").addClass("buildroom").removeClass("min");
+        $("#bbox").addClass("box1").removeClass("boxmin");
+        $("#bikeclick").addClass("bikebox").removeClass("hide");
     });
+    
+     $("#bikeclick").mouseover(function(){
+        
+     });
     
     // SEE CAVE
     
      $("#portal2").click(function() {
         $("#house").toggleClass("h2");
         $("#land").toggleClass("la2"); 
-        $(".cave").toggleClass("show");
+        $(".cave").toggleClass("show min");
         setTimeout(function() {
             $("#land").toggleClass("show");
         },1000);

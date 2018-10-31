@@ -287,7 +287,7 @@ body {
 .cave {
     position: absolute;
     height:60vh;
-    visibility: hidden;
+    transition: 1s;
 }
 
 #cout {
@@ -304,7 +304,8 @@ body {
 .building {
     position: absolute;
     height:45vh;
-    visibility: hidden;
+    opacity: 1;
+    transition:1s;
 }
 
 .show {
@@ -345,3 +346,61 @@ body {
     cursor: pointer;
 }
 
+.min {
+    height:30vh;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#broom {
+    position: absolute;
+    top:10vh;
+    left:10vh;
+}
+
+.buildroom {
+    visibility: visible;
+    transition: 1s;
+    opacity: 1;
+    height:80vh;
+}
+
+#bbox {
+    border: 1px solid black;
+    position: absolute;
+    top:25vh;
+    left: 100vh;
+}
+
+.box1 {
+    visibility: visible;
+    opacity: 1;
+    width: 35vh;
+    height: 35vh;
+    transition: 1s;
+}
+
+.boxmin {
+    height:10vh;
+    width:10vh;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#bikeclick {
+    position: absolute;
+}
+
+.bikebox {
+    width:8vh;
+    height:8vh;
+    top:71vh;
+    left: 28vh;
+    visibility: visible;
+}
+
+.bikebox:hover {
+    cursor: pointer;
+}
