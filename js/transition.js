@@ -16,6 +16,7 @@ $(document).ready(function(){
     var window1 = document.getElementById("window1");
     var window2 = document.getElementById("window2");
     
+    var falling = false;
     
     // ENTER ROOM
     
@@ -142,7 +143,7 @@ $(document).ready(function(){
         $("#bo").removeClass("show");
         $(".building").removeClass("show").addClass("min");
         $("#portal1").removeClass("show");
-        $("#broom").addClass("buildroom").removeClass("broomin");
+        $("#broom").addClass("buildroom show").removeClass("broomin");
         $("#bbox").addClass("box1").removeClass("boxmin");
         $("#bikeclick").addClass("bikebox").removeClass("hide");
         $("#wallclick").addClass("wallbox").removeClass("hide");
@@ -158,12 +159,80 @@ $(document).ready(function(){
      });
     
      $("#rugclick").mouseover(function(){
-        $("#rug").addClass("show").removeClass("hide");
+        $("#rug").removeClass("hide");
      });
+     $("#rugclick").mouseout(function(){
+        $("#rug").addClass("hide");
+    });
     
-    $("#rugclick").mouseout(function(){
-        $("#rug").removeClass("show").addClass("hide");
+    // 2D ROOM 
+    
+    $("#wallclick").click(function() {
+        $("#broom").addClass("buildside hide").removeClass("show");
+        $("#broom2").addClass("buildside show").removeClass("hide");
+        
+        $("#twod").addClass("rugIn"); 
+        setTimeout(function() {
+            $("#twod").removeClass("rugIn");
+            $("#wallclick2").removeClass("hide").addClass("show");
+        },1600);
+        $("#threed").removeClass("hide").addClass("rugIn"); 
+        $("#bikeclick").removeClass("bikebox").addClass("hide");
+        $("#wallclick").removeClass("wallbox").addClass("hide");
+        
+        $("#rugclick").removeClass("rugbox").addClass("hide");
+        $(".book").removeClass("hide").addClass("show");
+    });
+    
+    
+    $("#book1").mouseover(function(){
+        $("#comic1").removeClass("c1min hide").addClass("show");
+        $("#book2").addClass("hide").removeClass("show");
+        $("#book3").addClass("hide").removeClass("show");
      });
+     $("#book1").mouseout(function(){
+        $("#comic1").addClass("c1min hide").removeClass("show");
+         $("#book2").addClass("show").removeClass("hide");
+         $("#book3").addClass("show").removeClass("hide");
+    });
+    
+    
+     $("#book2").mouseover(function(){
+        $("#comic2").removeClass("c2min hide").addClass("show");
+        $("#book1").addClass("hide").removeClass("show");
+        $("#book3").addClass("hide").removeClass("show");
+     });
+     $("#book2").mouseout(function(){
+        $("#comic2").addClass("c2min hide").removeClass("show");
+         $("#book1").addClass("show").removeClass("hide");
+         $("#book3").addClass("show").removeClass("hide");
+    });
+    
+    $("#book3").mouseover(function(){
+        $("#comic3").removeClass("c3min hide").addClass("show");
+        $("#book1").addClass("hide").removeClass("show");
+        $("#book2").addClass("hide").removeClass("show");
+     });
+     $("#book3").mouseout(function(){
+        $("#comic3").addClass("c3min hide").removeClass("show");
+         $("#book1").addClass("show").removeClass("hide");
+         $("#book2").addClass("show").removeClass("hide");
+    });
+    
+    $("#wallclick2").click(function(){
+        $("#broom").addClass("show").removeClass("buildside hide");
+        $("#broom2").addClass("hide").removeClass("buildside show");
+        $("#threed").addClass("hide minthreed"); 
+        setTimeout(function() {
+            $("#threed").removeClass("rugIn minthreed");
+            $("#wallclick").removeClass("hide").addClass("wallbox");
+        },1100);
+        $("#bikeclick").removeClass("hide").addClass("bikebox");
+        $("#wallclick2").removeClass("show").addClass("hide");
+        $("#rugclick").removeClass("hide").addClass("rugbox");
+        $(".book").removeClass("show").addClass("hide");
+    });
+
     
     // RETURN OUT
     
@@ -172,12 +241,42 @@ $(document).ready(function(){
         $("#bo").addClass("show");
         $(".building").addClass("show").removeClass("min");
         $("#portal1").addClass("show");
-        $("#broom").addClass("broomin").removeClass("buildroom");
+        $("#broom").addClass("broomin").removeClass("buildroom show");
         $("#bbox").removeClass("box1").addClass("boxmin");
         $("#bikeclick").removeClass("bikebox").addClass("hide");
         $("#wallclick").removeClass("wallbox").addClass("hide");
         $("#rugclick").removeClass("rugbox").addClass("hide");
      });
+    
+    // FALL DOWN
+    
+    $("#rugclick").click(function(){
+        $("#broom").addClass("broomin").removeClass("buildroom show");
+        $("#bikeclick").removeClass("bikebox").addClass("hide");
+        $("#wallclick").removeClass("wallbox").addClass("hide");
+        $("#rugclick").removeClass("rugbox").addClass("hide");
+        $("#bbox").removeClass("box1").addClass("boxmin");
+        $("#rug").addClass("rugIn"); 
+        setTimeout(function() {
+            $("#rug").removeClass("rugIn");
+        },1100);
+        $("#rug2").removeClass("hide").addClass("rugIn"); 
+        $("#rugdown").addClass("yesdisplay").removeClass("nodisplay"); 
+        setTimeout(function() {
+           $("#rugdown").addClass("rugd").removeClass("hider"); 
+        },100);
+        
+        //scroll down
+        $(window).scroll(function() {
+         if($(window).scrollTop() + $(window).height() > $(document).height() - 400) {
+            $("#rug3").removeClass("hide"); 
+        } else if($(window).scrollTop() + $(window).height() < $(document).height() - 400) {
+            $("#rug3").addClass("hide"); 
+        }
+        });
+        
+    });
+      
     
     // SEE CAVE
     
@@ -191,8 +290,6 @@ $(document).ready(function(){
          $(".h1").toggleClass("show2");
         $("#portal1").toggleClass("show");
     });
-    
-    
     
     
  });

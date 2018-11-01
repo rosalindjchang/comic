@@ -375,13 +375,20 @@ body {
 
 }
 
+#broom2 {
+    position: absolute;
+
+}
+
 .buildroom {
     height:80vh;
-    visibility: visible;
     transition: 1s;
-    opacity: 1;
     top:10vh;
     left:10vh;
+}
+
+.buildside {
+    left:60vh;
 }
 
 #bbox {
@@ -429,6 +436,14 @@ body {
    position:absolute;
 }
 
+#wallclick2 {
+   position:absolute;
+}
+
+#wallclick2:hover {
+   cursor: pointer;
+}
+
 #rugclick {
    position:absolute;
 }
@@ -465,4 +480,146 @@ body {
     transition: 1s;
     top:25vh;
     left: 100vh;
+}
+
+#rugdown {
+    position: absolute;
+    margin-bottom: 20vh;
+}
+
+.rugd {
+    width: 90vh;
+    transition: 1s;
+    top:15vh;
+    left: 60vh;
+    opacity: 1;
+    visibility: visible;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.yesdisplay {
+    display: auto;
+}
+
+.hider {
+    width:60vh;
+    left:170vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+.rugIn {
+    left: 10vh;
+    position: fixed;
+}
+
+.minthreed {
+    width:20vh;
+}
+
+.disappear {
+    opacity: 0;
+}
+
+.book {
+    position: absolute;
+    border: 1px solid;
+    background: white;
+}
+
+.book:hover {
+    cursor: pointer;
+}
+
+#book1 {
+  width:2.8vh;
+  height: 4.2vh;
+  top:53.5vh;
+  left:66.5vh;
+}
+
+#book2 {
+  width:1.1vh;
+  height: 4.2vh;
+  top:61vh;
+  left:75.4vh;
+}
+
+#book3 {
+  width:4.3vh;
+  height: 4.2vh;
+  top:69.3vh;
+  left:69.3vh;
+}
+
+#comic1 {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid;
+    background-image: url("svg/comic-15.svg");
+}
+
+
+.c1 {
+    width: 52vh;
+    height:51vh;
+    left:32vh;
+    top:4vh;
+}
+
+.c1min {
+    top:47vh;
+    width:40vh;
+    left:40vh;
+    height: 10vh;
+}
+
+
+#comic2 {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid;
+    background-image: url("svg/comic-14.svg");
+}
+
+.c2 {
+    width: 80vh;
+    height:54vh;
+    left:10vh;
+    top:10vh;
+}
+
+.c2min {
+    top:55vh;
+    width:80vh;
+    height: 10vh;
+}
+
+#comic3 {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.5px solid;
+    background-image: url("svg/comic-16.svg");
+}
+
+
+.c3 {
+    width: 149vh;
+    height:43vh;
+    left:3vh;
+    top:28vh;
+}
+
+.c3min {
+    top:64vh;
+    width:60vh;
+    left:40vh;
+    height: 7vh;
 }
