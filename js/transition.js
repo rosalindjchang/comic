@@ -52,8 +52,7 @@ $(document).ready(function(){
          
             // RETURN to SCN1
             $("#windowS").click(function(){
-                $(".room").addClass("r1").removeClass("r2");
-                $("#roomr").addClass("r1").removeClass("r2");
+                $(".room,#roomr").addClass("r1").removeClass("r2");
                 $("body").addClass("dark").removeClass("light");
                 $(".shade").removeClass("noshade");  
                 windowoo.style.visibility = "hidden";
@@ -98,8 +97,7 @@ $(document).ready(function(){
         houseframe.style.visibility = "hidden";
         windowoo.style.visibility = "visible";
         windowSS.style.visibility = "visible";
-        $("#portal1").removeClass("show");
-        $("#portal2").removeClass("show");
+        $("#portal1,#portal2").removeClass("show");
     });
     
     
@@ -131,18 +129,14 @@ $(document).ready(function(){
             $("#land").toggleClass("show2");
         },1000);
         $(".h1").toggleClass("show2");
-        $("#portal2").toggleClass("show");
-        $("#bi").toggleClass("show");
-        $("#bo").toggleClass("show");
+        $("#portal2,#bi,#bo").toggleClass("show");
     });
     
     
     // INTO BUILDING
     $("#bi").click(function() {
-        $("#bi").removeClass("show");
-        $("#bo").removeClass("show");
+        $("#bi,#bo,#portal1").removeClass("show");
         $(".building").removeClass("show").addClass("min");
-        $("#portal1").removeClass("show");
         $("#broom").addClass("buildroom show").removeClass("broomin");
         $("#bbox").addClass("box1").removeClass("boxmin");
         $("#bikeclick").addClass("bikebox").removeClass("hide");
@@ -187,36 +181,29 @@ $(document).ready(function(){
     
     $("#book1").mouseover(function(){
         $("#comic1").removeClass("c1min hide").addClass("show");
-        $("#book2").addClass("hide").removeClass("show");
-        $("#book3").addClass("hide").removeClass("show");
+        $("#book2,#book3").addClass("hide").removeClass("show");
      });
      $("#book1").mouseout(function(){
         $("#comic1").addClass("c1min hide").removeClass("show");
-         $("#book2").addClass("show").removeClass("hide");
-         $("#book3").addClass("show").removeClass("hide");
+         $("#book2,#book3").addClass("show").removeClass("hide");
     });
-    
     
      $("#book2").mouseover(function(){
         $("#comic2").removeClass("c2min hide").addClass("show");
-        $("#book1").addClass("hide").removeClass("show");
-        $("#book3").addClass("hide").removeClass("show");
+        $("#book1,#book3").addClass("hide").removeClass("show");
      });
      $("#book2").mouseout(function(){
         $("#comic2").addClass("c2min hide").removeClass("show");
-         $("#book1").addClass("show").removeClass("hide");
-         $("#book3").addClass("show").removeClass("hide");
+         $("#book1,#book3").addClass("show").removeClass("hide");
     });
     
     $("#book3").mouseover(function(){
         $("#comic3").removeClass("c3min hide").addClass("show");
-        $("#book1").addClass("hide").removeClass("show");
-        $("#book2").addClass("hide").removeClass("show");
+        $("#book1,#book2").addClass("hide").removeClass("show");
      });
      $("#book3").mouseout(function(){
         $("#comic3").addClass("c3min hide").removeClass("show");
-         $("#book1").addClass("show").removeClass("hide");
-         $("#book2").addClass("show").removeClass("hide");
+         $("#book1,#book2").addClass("show").removeClass("hide");
     });
     
     $("#wallclick2").click(function(){
