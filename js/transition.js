@@ -164,12 +164,12 @@ $(document).ready(function(){
     $("#wallclick").click(function() {
         $("#broom").addClass("buildside hide").removeClass("show");
         $("#broom2").addClass("buildside show").removeClass("hide");
-        
+        $("#bbox").addClass("hide").removeClass("box1");
         $("#twod").addClass("rugIn"); 
         setTimeout(function() {
             $("#twod").removeClass("rugIn");
             $("#wallclick2").removeClass("hide").addClass("show");
-        },1600);
+        },2000);
         $("#threed").removeClass("hide").addClass("rugIn"); 
         $("#bikeclick").removeClass("bikebox").addClass("hide");
         $("#wallclick").removeClass("wallbox").addClass("hide");
@@ -181,35 +181,42 @@ $(document).ready(function(){
     
     $("#book1").mouseover(function(){
         $("#comic1").removeClass("c1min hide").addClass("show");
-        $("#book2,#book3").addClass("hide").removeClass("show");
+        $("#book2,#book3,#threed,#broom2").addClass("hide").removeClass("show");
+        $("#threed").addClass("hide");
      });
      $("#book1").mouseout(function(){
         $("#comic1").addClass("c1min hide").removeClass("show");
-         $("#book2,#book3").addClass("show").removeClass("hide");
+         $("#book2,#book3,#broom2").addClass("show").removeClass("hide");
+         $("#threed").removeClass("hide");
     });
     
      $("#book2").mouseover(function(){
         $("#comic2").removeClass("c2min hide").addClass("show");
-        $("#book1,#book3").addClass("hide").removeClass("show");
+        $("#book1,#book3,#broom2").addClass("hide").removeClass("show");
+          $("#threed").addClass("hide");
      });
      $("#book2").mouseout(function(){
         $("#comic2").addClass("c2min hide").removeClass("show");
-         $("#book1,#book3").addClass("show").removeClass("hide");
+         $("#book1,#book3,#broom2").addClass("show").removeClass("hide");
+         $("#threed").removeClass("hide");
     });
     
     $("#book3").mouseover(function(){
         $("#comic3").removeClass("c3min hide").addClass("show");
-        $("#book1,#book2").addClass("hide").removeClass("show");
+        $("#book1,#book2,#broom2").addClass("hide").removeClass("show");
+         $("#threed").addClass("hide");
      });
      $("#book3").mouseout(function(){
         $("#comic3").addClass("c3min hide").removeClass("show");
-         $("#book1,#book2").addClass("show").removeClass("hide");
+         $("#book1,#book2,#broom2").addClass("show").removeClass("hide");
+         $("#threed").removeClass("hide");
     });
     
     $("#wallclick2").click(function(){
         $("#broom").addClass("show").removeClass("buildside hide");
         $("#broom2").addClass("hide").removeClass("buildside show");
         $("#threed").addClass("hide minthreed"); 
+        $("#bbox").removeClass("hide").addClass("box1");
         setTimeout(function() {
             $("#threed").removeClass("rugIn minthreed");
             $("#wallclick").removeClass("hide").addClass("wallbox");
@@ -261,7 +268,6 @@ $(document).ready(function(){
             $("#rug3").addClass("hide"); 
         }
         });
-        
     });
       
     
