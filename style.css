@@ -512,6 +512,15 @@ body {
     transition: 1s;
 }
 
+.hided {
+    width:90vh;
+    top: -50vh;
+    left:60vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
 .rugIn {
     left: 10vh;
     position: fixed;
@@ -622,4 +631,55 @@ body {
     width:60vh;
     left:40vh;
     height: 7vh;
+}
+
+#abstract0 {
+    position: absolute;
+}
+
+.abstract00 {
+    height:100%;
+    left:0;
+    top:0;
+    transition: 1s;
+}
+
+.abox {
+    position: absolute;
+    background: #D3C7D1;
+    border: 1px solid;
+    width:15vw;
+    height:30vh;
+}
+
+#abox1 {
+    top:20vh;
+    left:56vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/abstract_1.svg");
+}
+
+#abox2{
+    top:20vh;
+    left:75vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/abstract_2.svg");
+}
+
+#abox4{
+    top:55vh;
+    left:75vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/abstract_4.svg");
+}
+
+#abox3{
+    top:55vh;
+    left:56vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/abstract_3.svg");
 }
