@@ -283,13 +283,66 @@ $(document).ready(function(){
             },2050);
             setTimeout(function() {
                  $("#abstract0").removeClass("hide").addClass("show"); 
-                $(".abox").removeClass("hide").addClass("show"); 
+                $(".abox").removeClass("hide").addClass("show noclick"); 
             },2150);
+            setTimeout(function() {
+                 $(".abox").removeClass("noclick");
+            },2500);
+             
         } else if($(window).scrollTop() + $(window).height() < $(document).height() - 400) {
             $("#rug3").addClass("hide"); 
         } });
     });
       
+    
+    // Abstract world
+    
+     $(".abox1").mouseover(function(){
+        $(".abox1").addClass("aboxo1");
+     });
+     $(".abox1").mouseout(function(){
+        $(".abox1").removeClass("aboxo1");
+    });
+    
+      $(".abox2").mouseover(function(){
+        $(".abox2").addClass("aboxo2");
+     });
+     $(".abox2").mouseout(function(){
+        $(".abox2").removeClass("aboxo2");
+    });
+    
+      $(".abox3").mouseover(function(){
+        $(".abox3").addClass("aboxo3");
+     });
+     $(".abox3").mouseout(function(){
+        $(".abox3").removeClass("aboxo3");
+    });
+    
+      $(".abox4").mouseover(function(){
+        $(".abox4").addClass("aboxo4");
+     });
+     $(".abox4").mouseout(function(){
+        $(".abox4").removeClass("aboxo4");
+    });
+    
+    
+    $(".abox4").click(function(){
+        $(".abox").addClass("hide").removeClass("show");
+        $("#abstract0").addClass("hide").removeClass("show");
+        $("body").removeClass("dark").addClass("light");
+        $("#bend0").addClass("bendscene2 show").removeClass("bendscene1 hide");
+        $(".absbox").addClass("show absboxbend").removeClass("hide");
+     });
+    
+    $(".absboxbend").click(function(){
+       $(".abox").addClass("show").removeClass("hide");
+         $("#abstract0").addClass("show").removeClass("hide");
+        $("body").removeClass("light").addClass("dark");
+        $("#bend0").addClass("bendscene1 hide").removeClass("bendscene2 show");
+        $(".absbox").addClass("hide").removeClass("show absboxbend");
+        console.log("hey");
+    });
+    
     
     // SEE CAVE
     

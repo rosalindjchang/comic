@@ -644,6 +644,10 @@ body {
     transition: 1s;
 }
 
+.abox:hover {
+    cursor:pointer;
+}
+
 .abox {
     position: absolute;
     background: #D3C7D1;
@@ -652,7 +656,7 @@ body {
     height:30vh;
 }
 
-#abox1 {
+.abox1 {
     top:20vh;
     left:56vw;
     background-repeat: no-repeat;
@@ -660,7 +664,7 @@ body {
     background-image: url("svg/abstract_1.svg");
 }
 
-#abox2{
+.abox2{
     top:20vh;
     left:75vw;
     background-repeat: no-repeat;
@@ -668,7 +672,7 @@ body {
     background-image: url("svg/abstract_2.svg");
 }
 
-#abox4{
+.abox4{
     top:55vh;
     left:75vw;
     background-repeat: no-repeat;
@@ -676,10 +680,84 @@ body {
     background-image: url("svg/abstract_4.svg");
 }
 
-#abox3{
+.abox3{
     top:55vh;
     left:56vw;
     background-repeat: no-repeat;
     background-size:cover;
     background-image: url("svg/abstract_3.svg");
+}
+
+.aboxo1 {
+    top:20vh;
+    left:56vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/outlines_1.svg");
+    transition:1s;
+}
+
+.aboxo2{
+    top:20vh;
+    left:75vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/outlines_2.svg");
+    transition:1s;
+}
+
+.aboxo4{
+    top:55vh;
+    left:75vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/outlines_4.svg");
+    transition:1s;
+}
+
+.aboxo3{
+    top:55vh;
+    left:56vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/outlines_3.svg");
+    transition:1s;
+}
+
+#bend0{
+    position: absolute;
+}
+
+.bendscene1 {
+    top:15vh;
+    left:25vw;
+    height:70vh;
+    transition: 1s;
+    
+}
+
+.bendscene2 {
+    top:5vh;
+    left:18vw;
+    height:90vh;
+    transition: 1s;
+}
+
+.absbox {
+    position: absolute;
+    width:24vh;
+    height:24vh;
+}
+
+.absbox:hover{
+    cursor: pointer;
+}
+
+.absboxbend{
+    top:13vh;
+    left:21vw;
+}
+
+.noclick {
+    pointer-events: none;
 }
