@@ -273,6 +273,7 @@ $(document).ready(function(){
          if($(window).scrollTop() + $(window).height() > $(document).height() - 400) {
             $("#rug3").removeClass("hide"); 
             $("#rug2").addClass("hide");
+            $(".abox").addClass("noclick");
             setTimeout(function() {
                  $("#rugdown").removeClass("rugd").addClass("hider"); 
                  $("#rug3").addClass("hide");   
@@ -280,14 +281,15 @@ $(document).ready(function(){
             },1000);
             setTimeout(function() {
                  $("#rugdown").addClass("nodisplay").removeClass("yesdisplay"); 
+                
             },2050);
             setTimeout(function() {
                  $("#abstract0").removeClass("hide").addClass("show"); 
-                $(".abox").removeClass("hide").addClass("show noclick"); 
+                $(".abox").removeClass("hide").addClass("show"); 
             },2150);
             setTimeout(function() {
                  $(".abox").removeClass("noclick");
-            },2500);
+            },2800);
              
         } else if($(window).scrollTop() + $(window).height() < $(document).height() - 400) {
             $("#rug3").addClass("hide"); 
@@ -332,15 +334,20 @@ $(document).ready(function(){
         $("body").removeClass("dark").addClass("light");
         $("#bend0").addClass("bendscene2 show").removeClass("bendscene1 hide");
         $(".absbox").addClass("show absboxbend").removeClass("hide");
+         setTimeout(function() {
+            $("#bend1").addClass("bendface2 show").removeClass("bendface1 hide");
+            $("#bend2").addClass("bendhand2 show").removeClass("bendhand1 hide");
+        },300);
      });
     
     $(".absboxbend").click(function(){
        $(".abox").addClass("show").removeClass("hide");
          $("#abstract0").addClass("show").removeClass("hide");
         $("body").removeClass("light").addClass("dark");
-        $("#bend0").addClass("bendscene1 hide").removeClass("bendscene2 show");
+        $("#bend1").addClass("bendface1 hide").removeClass("bendface2 show");
+        $("#bend2").addClass("bendhand1 hide").removeClass("bendhand2 show");
         $(".absbox").addClass("hide").removeClass("show absboxbend");
-        console.log("hey");
+         $("#bend0").addClass("bendscene1 hide").removeClass("bendscene2 show");
     });
     
     

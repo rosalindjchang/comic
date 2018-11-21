@@ -738,7 +738,7 @@ body {
 
 .bendscene2 {
     top:5vh;
-    left:18vw;
+    left:22vh;
     height:90vh;
     transition: 1s;
 }
@@ -760,4 +760,36 @@ body {
 
 .noclick {
     pointer-events: none;
+}
+
+#bend1{
+    position: absolute;
+}
+
+.bendface1 {
+    height:25vh;
+    left:77vh;
+    top:28vh;
+}
+
+.bendface2 {
+    height:30vh;
+    left:73vh;
+    top:25vh;
+}
+
+#bend2{
+    position: absolute;
+}
+
+.bendhand1 {
+    height:25vh;
+    left:88vh;
+    top:62vh;
+}
+
+.bendhand2 {
+    height:30vh;
+    left:85vh;
+    top:59vh;
 }
