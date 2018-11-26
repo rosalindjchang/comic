@@ -119,10 +119,11 @@ $(document).ready(function(){
         $("#land").removeClass("lp2").addClass("lp");
     });
     
+    
     // SEE BUILDING
     
     $("#portal1").click(function() {
-        $("#house").toggleClass("h2");
+        $("#house").toggleClass("h2").toggleClass("noclick");
         $("#land").toggleClass("la2"); 
         $(".building").toggleClass("show min");
         setTimeout(function() {
@@ -273,7 +274,6 @@ $(document).ready(function(){
          if($(window).scrollTop() + $(window).height() > $(document).height() - 400) {
             $("#rug3").removeClass("hide"); 
             $("#rug2").addClass("hide");
-            $(".abox").addClass("noclick");
             setTimeout(function() {
                  $("#rugdown").removeClass("rugd").addClass("hider"); 
                  $("#rug3").addClass("hide");   
@@ -285,7 +285,8 @@ $(document).ready(function(){
             },2050);
             setTimeout(function() {
                  $("#abstract0").removeClass("hide").addClass("show"); 
-                $(".abox").removeClass("hide").addClass("show"); 
+                $(".abox").removeClass("hide").addClass("show noclick"); 
+                $("body").addClass("noScroll");
             },2150);
             setTimeout(function() {
                  $(".abox").removeClass("noclick");
@@ -333,7 +334,7 @@ $(document).ready(function(){
         $("#abstract0").addClass("hide").removeClass("show");
         $("body").removeClass("dark").addClass("light");
         $("#bend0").addClass("bendscene2 show").removeClass("bendscene1 hide");
-        $(".absbox").addClass("show absboxbend").removeClass("hide");
+        $("#hi").addClass("show").removeClass("hide");
          setTimeout(function() {
             $("#bend1").addClass("bendface2 show").removeClass("bendface1 hide");
             $("#bend2").addClass("bendhand2 show").removeClass("bendhand1 hide");
@@ -346,15 +347,58 @@ $(document).ready(function(){
         $("body").removeClass("light").addClass("dark");
         $("#bend1").addClass("bendface1 hide").removeClass("bendface2 show");
         $("#bend2").addClass("bendhand1 hide").removeClass("bendhand2 show");
-        $(".absbox").addClass("hide").removeClass("show absboxbend");
+        $("#hi").addClass("hide").removeClass("show");
          $("#bend0").addClass("bendscene1 hide").removeClass("bendscene2 show");
     });
     
+     $(".abox2").click(function(){
+        $(".abox").addClass("hide").removeClass("show");
+        $("#abstract0").addClass("hide").removeClass("show");
+        $("body").removeClass("dark").addClass("light");
+        $("#jam0").addClass("jamscene2 show").removeClass("jamscene1 hide");
+         $("#jambox").addClass("show").removeClass("hide");
+         setTimeout(function() {
+            $("#jam1").addClass("jamface2 show").removeClass("jamface1 hide");
+            $("#jam2").addClass("jamhand2 show").removeClass("jamhand1 hide");
+        },300);
+     });
+    
+     $("#jambox").click(function(){
+       $(".abox").addClass("show").removeClass("hide");
+        $("#abstract0").addClass("show").removeClass("hide");
+        $("body").removeClass("light").addClass("dark");
+        $("#jam1").addClass("jamface1 hide").removeClass("jamface2 show");
+        $("#jam2").addClass("jamhand1 hide").removeClass("jamhand2 show");
+        $("#jambox").addClass("hide").removeClass("show");
+         $("#jam0").addClass("jamscene1 hide").removeClass("jamscene2 show");
+    });
+    
+     $(".abox3").click(function(){
+        $(".abox").addClass("hide").removeClass("show");
+        $("#abstract0").addClass("hide").removeClass("show");
+        $("body").removeClass("dark").addClass("light");
+        $("#spill0").addClass("jamscene2 show").removeClass("jamscene1 hide");
+         $("#spillbox").addClass("show").removeClass("hide");
+         setTimeout(function() {
+            $("#spill1").addClass("jamface2 show").removeClass("jamface1 hide");
+            $("#spill2").addClass("spillhand2 show").removeClass("spillhand1 hide");
+        },300);
+     });
+    
+     $("#spillbox").click(function(){
+       $(".abox").addClass("show").removeClass("hide");
+        $("#abstract0").addClass("show").removeClass("hide");
+        $("body").removeClass("light").addClass("dark");
+        $("#spill1").addClass("jamface1 hide").removeClass("jamface2 show");
+        $("#spill2").addClass("spillhand1 hide").removeClass("spillhand2 show");
+        $("#spillbox").addClass("hide").removeClass("show");
+         $("#spill0").addClass("jamscene1 hide").removeClass("jamscene2 show");
+    });
     
     // SEE CAVE
     
      $("#portal2").click(function() {
-        $("#house").toggleClass("h2");
+        $("#house").toggleClass("h2").toggleClass("noclick");
         $("#land").toggleClass("la2"); 
         $(".cave").toggleClass("show min");
         setTimeout(function() {

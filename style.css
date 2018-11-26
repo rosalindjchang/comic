@@ -638,9 +638,9 @@ body {
 }
 
 .abstract00 {
-    height:100%;
+    height:100vh;
     left:0;
-    top:0;
+    top:0vh;
     transition: 1s;
 }
 
@@ -733,7 +733,6 @@ body {
     left:25vw;
     height:70vh;
     transition: 1s;
-    
 }
 
 .bendscene2 {
@@ -755,7 +754,12 @@ body {
 
 .absboxbend{
     top:13vh;
-    left:21vw;
+    left:15vw;
+}
+
+.absboxbend2{
+    top:29vh;
+    left:63vw;
 }
 
 .noclick {
@@ -792,4 +796,87 @@ body {
     height:30vh;
     left:85vh;
     top:59vh;
+}
+
+.noScroll {
+    overflow:hidden;
+    height:200vh;
+}
+
+#jam0 {
+    position: absolute;
+}
+
+#jam1 {
+    position: absolute;
+}
+
+#jam2 {
+    position: absolute;
+}
+
+.jamscene1 {
+    top:15vh;
+    left:89vh;
+    height:70vh;
+    transition: 1s;
+}
+.jamscene2 {
+    top:5vh;
+    left:85vh;
+    height:90vh;
+    transition: 1s;
+}
+
+.jamface1 {
+    height:25vh;
+    left:70vh;
+    top:17vh;
+}
+
+.jamhand1 {
+    height:25vh;
+    left:50vh;
+    top:53vh;
+}
+
+.jamface2 {
+    height:30vh;
+    left:64vh;
+    top:12vh;
+}
+
+.jamhand2 {
+    height:30vh;
+    left:47vh;
+    top:50vh;
+}
+
+#spill0 {
+    position: absolute;
+}
+
+#spill1 {
+    position: absolute;
+}
+
+#spill2 {
+    position: absolute;
+}
+
+.spillhand1 {
+    height:25vh;
+    left:68vh;
+    top:48vh;
+}
+
+.spillhand2 {
+    height:30vh;
+    left:64vh;
+    top:44vh;
+}
+
+.absboxbend3 {
+    left:117vh;
+    top:42vh;
 }
