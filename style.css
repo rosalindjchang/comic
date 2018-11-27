@@ -880,3 +880,54 @@ body {
     left:117vh;
     top:42vh;
 }
+
+.abstracty:hover {
+    cursor: pointer;
+}
+
+.abstracty  {
+    position: absolute;
+    width:4vh;
+    height: 3vh;
+    top:25vh;
+    left:44vh;
+}
+
+#table0 {
+    position: absolute;
+}
+#table1 {
+    position: absolute;
+}
+#table2 {
+    position: absolute;
+}
+
+.tableface2 {
+    height:30vh;
+    left:93vh;
+    top:24vh;
+}
+
+.tablehand2 {
+    height:30vh;
+    left:75vh;
+    top:59vh;
+}
+
+.tableface1 {
+    height:25vh;
+    left:97vh;
+    top:28vh;
+}
+
+.tablehand1 {
+    height:25vh;
+    left:79vh;
+    top:63vh;
+}
+
+.absboxbend4{
+    top:23vh;
+    left:14vw;
+}

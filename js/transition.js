@@ -240,10 +240,8 @@ $(document).ready(function(){
     // RETURN OUT
     
     $("#bikeclick").click(function(){
-        $("#bi").addClass("show");
-        $("#bo").addClass("show");
+        $("#bi, #bo, #portal1").addClass("show");
         $(".building").addClass("show").removeClass("min");
-        $("#portal1").addClass("show");
         $("#broom").addClass("broomin").removeClass("buildroom show");
         $("#bbox").removeClass("box1").addClass("boxmin");
         $("#bikeclick").removeClass("bikebox").addClass("hide");
@@ -254,6 +252,7 @@ $(document).ready(function(){
     // FALL DOWN
     
     $("#rugclick").click(function(){
+        $("body").removeClass("noScroll");
         $("#broom").addClass("broomin").removeClass("buildroom show");
         $("#bikeclick").removeClass("bikebox").addClass("hide");
         $("#wallclick").removeClass("wallbox").addClass("hide");
@@ -275,17 +274,16 @@ $(document).ready(function(){
             $("#rug3").removeClass("hide"); 
             $("#rug2").addClass("hide");
             setTimeout(function() {
-                 $("#rugdown").removeClass("rugd").addClass("hider"); 
-                 $("#rug3").addClass("hide");   
+                 $("#rugdown").removeClass("rugd yesdisplay").addClass("hider nodisplay"); 
+                 $("#rug3").addClass("hide nodisplay");   
                  $("body").removeClass("light").addClass("dark");
+                $(".abstracty").addClass("show").removeClass("hide");
             },1000);
-            setTimeout(function() {
-                 $("#rugdown").addClass("nodisplay").removeClass("yesdisplay"); 
-                
-            },2050);
+   
             setTimeout(function() {
                  $("#abstract0").removeClass("hide").addClass("show"); 
                 $(".abox").removeClass("hide").addClass("show noclick"); 
+                 $(document).scrollTop(0);
                 $("body").addClass("noScroll");
             },2150);
             setTimeout(function() {
@@ -328,22 +326,37 @@ $(document).ready(function(){
         $(".abox4").removeClass("aboxo4");
     });
     
+    $(".abstracty").mouseover(function(){
+        $("#abstract0y").addClass("show").removeClass("hide");
+     });
+    
+     $(".abstracty").mouseout(function(){
+        $("#abstract0y").addClass("hide").removeClass("show");
+    });
+    
+    $(".abstracty").click(function(){
+        $("#broom").addClass("buildroom show").removeClass("broomin");
+        $("#bbox").addClass("box1").removeClass("boxmin");
+        $("#bikeclick").addClass("bikebox").removeClass("hide");
+        $("#wallclick").addClass("wallbox").removeClass("hide");
+        $("#rugclick").addClass("rugbox").removeClass("hide");
+        $("body").removeClass("dark").addClass("light");
+        $("#abstract0, .abox, .abstracty, #abstract0y").addClass("hide").removeClass("show");
+    });
     
     $(".abox4").click(function(){
-        $(".abox").addClass("hide").removeClass("show");
-        $("#abstract0").addClass("hide").removeClass("show");
+        $(".abox, #abstract0").addClass("hide").removeClass("show");
         $("body").removeClass("dark").addClass("light");
         $("#bend0").addClass("bendscene2 show").removeClass("bendscene1 hide");
         $("#hi").addClass("show").removeClass("hide");
-         setTimeout(function() {
+        setTimeout(function() {
             $("#bend1").addClass("bendface2 show").removeClass("bendface1 hide");
             $("#bend2").addClass("bendhand2 show").removeClass("bendhand1 hide");
         },300);
      });
     
     $(".absboxbend").click(function(){
-       $(".abox").addClass("show").removeClass("hide");
-         $("#abstract0").addClass("show").removeClass("hide");
+       $(".abox, #abstract0").addClass("show").removeClass("hide");
         $("body").removeClass("light").addClass("dark");
         $("#bend1").addClass("bendface1 hide").removeClass("bendface2 show");
         $("#bend2").addClass("bendhand1 hide").removeClass("bendhand2 show");
@@ -352,8 +365,7 @@ $(document).ready(function(){
     });
     
      $(".abox2").click(function(){
-        $(".abox").addClass("hide").removeClass("show");
-        $("#abstract0").addClass("hide").removeClass("show");
+        $(".abox, #abstract0").addClass("hide").removeClass("show");
         $("body").removeClass("dark").addClass("light");
         $("#jam0").addClass("jamscene2 show").removeClass("jamscene1 hide");
          $("#jambox").addClass("show").removeClass("hide");
@@ -364,8 +376,7 @@ $(document).ready(function(){
      });
     
      $("#jambox").click(function(){
-       $(".abox").addClass("show").removeClass("hide");
-        $("#abstract0").addClass("show").removeClass("hide");
+       $(".abox, #abstract0").addClass("show").removeClass("hide");
         $("body").removeClass("light").addClass("dark");
         $("#jam1").addClass("jamface1 hide").removeClass("jamface2 show");
         $("#jam2").addClass("jamhand1 hide").removeClass("jamhand2 show");
@@ -386,13 +397,32 @@ $(document).ready(function(){
      });
     
      $("#spillbox").click(function(){
-       $(".abox").addClass("show").removeClass("hide");
-        $("#abstract0").addClass("show").removeClass("hide");
+       $(".abox, #abstract0").addClass("show").removeClass("hide");
         $("body").removeClass("light").addClass("dark");
         $("#spill1").addClass("jamface1 hide").removeClass("jamface2 show");
         $("#spill2").addClass("spillhand1 hide").removeClass("spillhand2 show");
         $("#spillbox").addClass("hide").removeClass("show");
-         $("#spill0").addClass("jamscene1 hide").removeClass("jamscene2 show");
+        $("#spill0").addClass("jamscene1 hide").removeClass("jamscene2 show");
+    });
+    
+     $(".abox1").click(function(){
+        $(".abox, #abstract0").addClass("hide").removeClass("show");
+        $("body").removeClass("dark").addClass("light");
+        $("#table0").addClass("bendscene2 show").removeClass("bendscene1 hide");
+         $("#tablebox").addClass("show").removeClass("hide");
+         setTimeout(function() {
+            $("#table1").addClass("tableface2 show").removeClass("tableface1 hide");
+            $("#table2").addClass("tablehand2 show").removeClass("tablehand1 hide");
+        },300);
+     });
+    
+    $("#tablebox").click(function(){
+       $(".abox, #abstract0").addClass("show").removeClass("hide");
+        $("body").removeClass("light").addClass("dark");
+        $("#table1").addClass("tableface1 hide").removeClass("tableface2 show");
+        $("#table2").addClass("tablehand1 hide").removeClass("tablehand2 show");
+        $("#tablebox").addClass("hide").removeClass("show");
+        $("#table0").addClass("bendscene1 hide").removeClass("bendscene2 show");
     });
     
     // SEE CAVE
