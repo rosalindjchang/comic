@@ -281,9 +281,7 @@ body {
         right:12vw;
     }
 
-    #portal2:hover {
-        cursor: pointer;
-    }
+    #portal2:hover {cursor: pointer;}
 }
 
 .cave {
@@ -300,6 +298,14 @@ body {
 #cin {
     top:20vh;
     left:63vh; 
+}
+
+#cavebox:hover{cursor: pointer;}
+
+#cavebox {
+    width:33vh;
+    top:20vh;
+    left:63vh;
 }
 
 
@@ -344,7 +350,7 @@ body {
 
 #bi {
     width:45vh;
-   height: 45vh;
+    height: 45vh;
     top:20vh;
     left:75vh;
     position: absolute;
@@ -930,4 +936,62 @@ body {
 .absboxbend4{
     top:23vh;
     left:14vw;
+}
+
+.caverect {
+    position: absolute;
+    outline: 1px solid #F4F1CE;
+    width: 40vh;
+    height: 70vh;
+}
+
+.cavemin {
+    position: absolute;
+    outline: 1px solid #F4F1CE;
+    width: 20vh;
+    height: 50vh;
+}
+
+.y {
+    top:10vh;
+    left:30vh;
+    background: #F4F1CE;
+}
+
+.y:hover {
+    cursor: pointer;
+}
+
+.caver1 {
+    top:18vh;
+    left:10vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/incave-06.svg");
+}
+
+.caver2 {
+    top:18vh;
+    left:110vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image: url("svg/incave-07.svg");
+}
+
+.cavesqr {
+    outline: 1px solid #F4F1CE;
+    background: black;
+    position: absolute;
+    top:34vh;
+    left:64vh;
+}
+
+.sqrsmall {
+    width:15vh;
+    height: 15vh;
+}
+
+.sqrl {
+    width:35vh;
+    height: 35vh;
 }

@@ -438,5 +438,22 @@ $(document).ready(function(){
         $("#portal1").toggleClass("show");
     });
     
+    $("#cavebox").click(function(){
+        $(".cave").addClass("min").removeClass("show");
+        $("#portal2").removeClass("show");
+        $("body").addClass("dark").removeClass("light");
+        $(".c").addClass("caverect show").removeClass("cavemin hide");
+        $(".cavesqr").addClass("sqrl show").removeClass("sqrsmall hide");
+    });
+    
+    $(".y").click(function(){
+        $("#portal2").addClass("hide");
+        $("body").addClass("light").removeClass("dark");
+        $(".cave").addClass("show").removeClass("min");
+        $(".c").addClass("cavemin hide").removeClass("caverect show");
+        $(".cavesqr").addClass("sqrl show").removeClass("sqrsmall hide");
+        
+    });
+    
  });
 
