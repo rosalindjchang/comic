@@ -444,15 +444,136 @@ $(document).ready(function(){
         $("body").addClass("dark").removeClass("light");
         $(".c").addClass("caverect show").removeClass("cavemin hide");
         $(".cavesqr").addClass("sqrl show").removeClass("sqrsmall hide");
+        $(".cavewindow, .cavefloor").addClass("show").removeClass("hide");
     });
     
     $(".y").click(function(){
-        $("#portal2").addClass("hide");
+        $("#portal2").addClass("show");
         $("body").addClass("light").removeClass("dark");
         $(".cave").addClass("show").removeClass("min");
         $(".c").addClass("cavemin hide").removeClass("caverect show");
+        $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
+        $(".cavewindow, .cavefloor").addClass("hide").removeClass("show");
+    });
+    
+    $(".caver1").click(function(){
+        $(".cavetunnel").addClass("show").removeClass("hide casmall"); 
+        $(".c").addClass("cavemin hide").removeClass("caverect show");
+        $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
+        $(".cavebike").addClass("hide").removeClass("show");
+        $(".caveout, .caveonwards").addClass("show").removeClass("hide");
+    });
+    
+    $(".caveout").click(function(){
+        $(".cavetunnel").addClass("hide casmall").removeClass("show"); 
+        $(".caveout, .caveonwards").addClass("hide").removeClass("show");
+        $("body").addClass("light").removeClass("dark");
+        $("#house").addClass("h2").removeClass("noclick");
+        $("#land").removeClass("la2"); 
+        $(".building").addClass("show min");
+        setTimeout(function() {
+            $("#land").addClass("show2");
+        },1000);
+        $(".h1").addClass("show2");
+        $("#portal2, #portal1").addClass("show");
+    });
+    
+    
+     $(".caver1").mouseover(function(){
+        $(".cavebike").addClass("show").removeClass("hide");
+     });
+     $(".caver1").mouseout(function(){
+        $(".cavebike").addClass("hide").removeClass("show");
+    });
+    
+     $(".cavewindow").mouseover(function(){
+        $(".cavew").addClass("show").removeClass("hide");
+     });
+     $(".cavewindow").mouseout(function(){
+        $(".cavew").addClass("hide").removeClass("show");
+    });
+    
+    $(".cavefloor").mouseover(function(){
+        $(".cavef").addClass("show").removeClass("hide");
+     });
+     $(".cavefloor").mouseout(function(){
+        $(".cavef").addClass("hide").removeClass("show");
+    });
+    
+    $(".cavefloor").click(function(){
+        $(".c").addClass("cavemin hide").removeClass("caverect show");
+        $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
+        $(".cavewindow, .cavefloor").addClass("hide").removeClass("show");
+        $(".cavef").addClass("hide").removeClass("show");
+        $("#abstract0").addClass("abstractdown");
+        $(".abox").addClass("aboxdown");
+        setTimeout(function() {
+           $(".abstracty").addClass("show").removeClass("hide");
+           $("#abstract0").removeClass("hide abstractdown").addClass("show"); 
+           $(".abox").removeClass("hide noclick aboxdown");
+        },1000);
+    });
+    
+     $(".cavewindow").click(function(){ 
+        $(".cavewindow2").addClass("show").removeClass("hide windowside");
+        $(".caveinner").addClass("show").removeClass("hide smallcin");  
+        $(".cavefloor").addClass("hide").removeClass("show");
+        $(".c").addClass("cavemin hide").removeClass("caverect show");
+        $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
+        $(".cavew").addClass("hide").removeClass("show");
+        $(".caveselect").addClass("show").removeClass("hide");
+     });
+    
+     $(".cavewindow2").click(function(){ 
+        $(".cavewindow2").addClass("hide windowside").removeClass("show");
+        $(".caveinner").addClass("hide smallcin").removeClass("show");  
+        $(".cavefloor").addClass("show").removeClass("hide");
+        $(".c").addClass("caverect show").removeClass("cavemin hide");
         $(".cavesqr").addClass("sqrl show").removeClass("sqrsmall hide");
-        
+        $(".caveselect").addClass("hide").removeClass("show");
+     });
+    
+     $(".cs1").mouseover(function(){
+        $(".cavees1").addClass("show").removeClass("hide caveesmall");
+        $(".caveinner").addClass("hide smallcin").removeClass("show");  
+     });
+     $(".cs1").mouseout(function(){
+        $(".cavees1").addClass("hide caveesmall").removeClass("show");
+         $(".caveinner").addClass("show").removeClass("hide smallcin"); 
+    });
+    
+     $(".cs2").mouseover(function(){
+        $(".cavees2").addClass("show").removeClass("hide caveesmall");
+        $(".caveinner").addClass("hide smallcin").removeClass("show");  
+     });
+     $(".cs2").mouseout(function(){
+        $(".cavees2").addClass("hide caveesmall").removeClass("show");
+         $(".caveinner").addClass("show").removeClass("hide smallcin"); 
+    });
+    
+    $(".cs3").mouseover(function(){
+         $(".cavees3").addClass("show").removeClass("hide caveesmall");
+        $(".caveinner").addClass("hide smallcin").removeClass("show");  
+     });
+     $(".cs3").mouseout(function(){
+          $(".cavees3").addClass("hide caveesmall").removeClass("show");
+         $(".caveinner").addClass("show").removeClass("hide smallcin"); 
+    });
+    
+    $(".caveonwards").click(function(){
+        $(".cavetunnel").addClass("hide casmall").removeClass("show"); 
+        $(".oc1").addClass("show outcave1l").removeClass("hide outcave1"); 
+        $(".oc2").addClass("show outcave2l").removeClass("hide outcave2"); 
+        $("body").addClass("light").removeClass("dark");
+        $(".backindacave").addClass("show").removeClass("hide");
+    });
+    
+    $(".backindacave").click(function(){
+        $(".backindacave").removeClass("show").addClass("show");
+        $(".cavetunnel").addClass("show").removeClass("hide casmall"); 
+        $(".oc1").addClass("hide outcave1").removeClass("show outcave1l"); 
+        $(".oc2").addClass("hide outcave2").removeClass("show outcave2l"); 
+        $("body").addClass("dark").removeClass("light");
     });
     
  });

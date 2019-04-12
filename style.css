@@ -654,12 +654,18 @@ body {
     cursor:pointer;
 }
 
+.aboxdown {
+    margin-top: 15vh;
+    transition:1s;
+}
+
 .abox {
     position: absolute;
     background: #D3C7D1;
     border: 1px solid;
     width:15vw;
     height:30vh;
+    transition: 1s;
 }
 
 .abox1 {
@@ -770,6 +776,10 @@ body {
 
 .noclick {
     pointer-events: none;
+}
+
+.clickable:hover {
+    cursor: pointer;
 }
 
 #bend1{
@@ -899,6 +909,11 @@ body {
     left:44vh;
 }
 
+.abstractdown {
+    top:30vh;
+    transition: 1s;
+}
+
 #table0 {
     position: absolute;
 }
@@ -994,4 +1009,202 @@ body {
 .sqrl {
     width:35vh;
     height: 35vh;
+    position: absolute;
 }
+
+.cavetunnel {
+    position: absolute;
+}
+
+.ca1 {
+    width:80vh;
+    top:10vh;
+    left:10vh;
+}
+
+.ca2 {
+    width:30vh;
+    top:58.7vh;
+    left: 89.9vh;
+}
+
+.ca3 {
+   width:25vh; 
+   top: 10vh;
+    left: 115vh;
+}
+
+.ca4 {
+  width:50vh;
+  top:32vh;
+  left:89.9vh; 
+}
+
+.casmall {
+    width: 20vh;
+}
+
+.caver1:hover {
+    cursor:pointer;
+}
+
+.caves {
+    position: absolute;
+    top:34vh;
+    left:64vh;
+}
+
+.cavewindow {
+    position:absolute;
+    top:45vh;
+    left:131vh;
+    width:7vh;
+    height:16vh;
+}
+
+.cavewindow2 {
+    position:absolute;
+    top:5vh;
+    left:5vh;
+    width:7vh;
+    height:16vh;
+    border: 1px solid #f4f1ce;
+}
+
+.cavewindow2:hover {
+    cursor: pointer;
+}
+
+.windowside {
+    left:15vh;
+    top:10vh;
+}
+
+.cavewindow:hover {
+    cursor:pointer;
+}
+
+.cavefloor {
+    position:absolute;
+    top:72vh;
+    left:124vh;
+    width:13vh;
+    height:5vh;
+}
+
+.cavefloor:hover {
+    cursor:pointer;
+}
+
+.caveinner {
+    position: absolute;
+    width: 120vh;
+    left:30vh;
+    top:10vh;
+}
+
+.smallcin {
+    width:140vh;
+    left:20vh;
+}
+
+.caveselect {
+    position: absolute;
+    width:5vh;
+    height:6vh;
+}
+
+.caveselect:hover {
+    cursor: pointer;
+}
+
+.cs1 {
+    top:55vh;
+    left:137.5vh;
+}
+
+.cs2 {
+    top:83vh;
+    left:90vh;
+}
+
+.cs3 {
+    top:32vh;
+    left:77vh;
+}
+
+.cavees {
+    position: absolute;
+    width:45vh;
+}
+
+.cavees1 {
+     top:24vh;
+    left:110vh;
+}
+
+.cavees2 {
+    top:53vh;
+    left:70vh;
+}
+
+.cavees3 {
+    top:2vh;
+    left:60vh;
+}
+
+.caveout {
+    position: absolute;
+    width:8vh;
+    height: 15vh;
+    top:42vh;
+    left:78vh;
+}
+
+.caveesmall {
+    width: 35vh;
+}
+
+.caveonwards {
+    position: absolute;
+    width:2vh;
+    height: 5vh;
+    top:41vh;
+    left: 41vh;
+}
+
+
+.outcave1 {
+    position: absolute;
+    width:80vh;
+    top:20vh;
+    left:42vh;
+}
+
+.outcave2 {
+    position: absolute;
+    width:15vh;
+    top:20vh;
+    left: 20vh;
+}
+
+.outcave1l {
+    position: absolute;
+    width:110vh;
+    top:20vh;
+    left:40vh;
+}
+
+.outcave2l {
+    position: absolute;
+    width:26vh;
+    height:26vh;
+    top:10vh;
+    left: 10vh;
+}
+
+.backindacave:hover {
+    cursor:pointer;
+}
+
+
