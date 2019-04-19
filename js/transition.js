@@ -451,7 +451,7 @@ $(document).ready(function(){
         $("#portal2").addClass("show");
         $("body").addClass("light").removeClass("dark");
         $(".cave").addClass("show").removeClass("min");
-        $(".c").addClass("cavemin hide").removeClass("caverect show");
+        $(".c").addClass("cavemin hide").removeClass("cavercect show");
         $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
         $(".cavewindow, .cavefloor").addClass("hide").removeClass("show");
     });
@@ -462,6 +462,7 @@ $(document).ready(function(){
         $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
         $(".cavebike").addClass("hide").removeClass("show");
         $(".caveout, .caveonwards").addClass("show").removeClass("hide");
+          $(".cavewindow, .cavefloor").addClass("hide").removeClass("show");
     });
     
     $(".caveout").click(function(){
@@ -517,7 +518,7 @@ $(document).ready(function(){
      $(".cavewindow").click(function(){ 
         $(".cavewindow2").addClass("show").removeClass("hide windowside");
         $(".caveinner").addClass("show").removeClass("hide smallcin");  
-        $(".cavefloor").addClass("hide").removeClass("show");
+        $(".cavewindow, .cavefloor").addClass("hide").removeClass("show");
         $(".c").addClass("cavemin hide").removeClass("caverect show");
         $(".cavesqr").addClass("sqrsmall hide").removeClass("sqrl show");
         $(".cavew").addClass("hide").removeClass("show");
@@ -527,7 +528,7 @@ $(document).ready(function(){
      $(".cavewindow2").click(function(){ 
         $(".cavewindow2").addClass("hide windowside").removeClass("show");
         $(".caveinner").addClass("hide smallcin").removeClass("show");  
-        $(".cavefloor").addClass("show").removeClass("hide");
+        $(".cavewindow, .cavefloor").addClass("show").removeClass("hide");
         $(".c").addClass("caverect show").removeClass("cavemin hide");
         $(".cavesqr").addClass("sqrl show").removeClass("sqrsmall hide");
         $(".caveselect").addClass("hide").removeClass("show");
