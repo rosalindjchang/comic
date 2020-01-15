@@ -18,6 +18,15 @@ $(document).ready(function(){
     
     var falling = false;
     
+	
+	//back to index
+	
+	$(".zineindex").click(function(){
+		window.location = 'https://rosalindjchang.github.io/zine-index/';
+	});
+	
+	
+	
     // ENTER ROOM
     
     $("#roomr").click(function(){
