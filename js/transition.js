@@ -1,4 +1,43 @@
 $(document).ready(function(){
+	
+	
+	//// idle??
+	
+	idleTime_inactive = 0;
+	var idleInterval = setInterval(timerIncrements, 1000);
+	var idleTime_inactivetemp = false;
+	function timerIncrements()
+	{
+		console.log(idleTime_inactive);
+		if(idleTime_inactivetemp == false) {
+			idleTime_inactive++;
+			if (idleTime_inactive >= 30){
+				window.location = 'https://rosalindjchang.github.io/zine-index/';
+			}
+		}
+	}
+	function get_pagescroll_per(){
+		var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+		var  scrolltrigger = 0.95;
+		return (wintop/(docheight-winheight))*100;
+	}
+
+	$(document).bind('mouseover click keydown scroll', function () {
+		idleTime_inactive = 0;
+	});
+
+	document.addEventListener("visibilitychange", function() {
+	  if(document.hidden == true) {
+		idleTime_inactivetemp = true;
+	  } else {
+		idleTime_inactivetemp = false;
+	  }
+	}, false);
+	
+	
+
+	
+	//////////////////////////////////
     
     var roomIn = false;
     
@@ -24,7 +63,6 @@ $(document).ready(function(){
 	$(".zineindex").click(function(){
 		window.location = 'https://rosalindjchang.github.io/zine-index/';
 	});
-	
 	
 	
     // ENTER ROOM
